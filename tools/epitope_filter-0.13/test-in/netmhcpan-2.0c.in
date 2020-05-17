@@ -1,0 +1,242 @@
+# /home/chupcko/wrk/matf/predictors-2012-11-27/netmhcpan-2.0c/Linux_x86_64/bin/netMHCpan iedb_9011.faa
+# Wed Nov 28 01:18:54 2012
+# User: chupcko
+# PWD : /home/chupcko/wrk/matf/tools/epitope_filter-0.6
+# Host: Linux msi 3.1.6 x86_64
+# Command line parameters set to:
+#	[-rdir filename]     /home/chupcko/wrk/matf/predictors-2012-11-27/netmhcpan-2.0c/Linux_x86_64 Home directory for NetMHpan
+#	[-blsyn filename]    /home/chupcko/wrk/matf/predictors-2012-11-27/netmhcpan-2.0c/Linux_x86_64/data/syn/bl/synlist Blosum synaps list
+#	[-spsyn filename]    /home/chupcko/wrk/matf/predictors-2012-11-27/netmhcpan-2.0c/Linux_x86_64/data/syn/sp/synlist Sparse synaps list
+#	[-spblsyn filename]  /home/chupcko/wrk/matf/predictors-2012-11-27/netmhcpan-2.0c/Linux_x86_64/data/syn/spbl/synlist SPBL synaps list
+#	[-smin float]        -1.000000            Min value for sparse encoding
+#	[-smax float]        1.000000             Max value for sparse encoding
+#	[-bln float]         5.000000             Normalizing factor for blosum score
+#	[-v]                 0                    Verbose mode
+#	[-dirty]             0                    Dirty mode, leave tmp dir+files
+#	[-sdev]              0                    Print sdev
+#	[-tdir filename]     /tmp                 Temporary directory (Default $$)
+#	[-hlapseudo filename] /home/chupcko/wrk/matf/predictors-2012-11-27/netmhcpan-2.0c/Linux_x86_64/data/MHC_pseudo.dat File with HLA pseudo sequences
+#	[-hlaseq filename]                        File with full length HLA sequences
+#	[-block int]         50000                Block size of predictions
+#	[-a string]          HLA-A0201            HLA allele
+#	[-f filename]                             File name with input
+#	[-s]                 0                    Sort output on descending affinity
+#	[-p]                 0                    Use peptide input
+#	[-th float]          50.000000            Threshold for high binding peptides
+#	[-lt float]          500.000000           Threshold for low binding peptides
+#	[-l int]             9                    Peptide length [8-11]
+#	[-xls]               0                    Save output to xls file
+#	[-xlsfile filename]  NetMHCpan_out.xls    Filename for xls dump
+#	[-t float]           -99.900002           Threshold for output
+#	[-listMHC]           0                    Print list of alleles included in netMHCpan
+
+# NetMHCpan version 2.0
+
+# Input is in FSA format
+# Threshold for Strong binding peptides  50.000
+# Threshold for Weak binding peptides 500.000
+
+# Peptide length 9
+
+HLA-A0201 : Estimated prediction accuracy  0.811 (using nearest neighbor HLA-A0201)
+
+-----------------------------------------------------------------------------------
+  pos        HLA    peptide        Identity 1-log50k(aff) Affinity(nM) Bind Level
+-----------------------------------------------------------------------------------
+    0 HLA-A*0201  MLANRLFLI     gi|15605331         0.846         5.31 <= SB
+    1 HLA-A*0201  LANRLFLIT     gi|15605331         0.074     22336.87
+    2 HLA-A*0201  ANRLFLITL     gi|15605331         0.085     19874.59
+    3 HLA-A*0201  NRLFLITLL     gi|15605331         0.113     14672.57
+    4 HLA-A*0201  RLFLITLLG     gi|15605331         0.189      6472.49
+    5 HLA-A*0201  LFLITLLGL     gi|15605331         0.255      3156.91
+    6 HLA-A*0201  FLITLLGLS     gi|15605331         0.407       609.58
+    7 HLA-A*0201  LITLLGLSS     gi|15605331         0.093     18316.92
+    8 HLA-A*0201  ITLLGLSSS     gi|15605331         0.111     15102.95
+    9 HLA-A*0201  TLLGLSSSV     gi|15605331         0.695        27.25 <= SB
+   10 HLA-A*0201  LLGLSSSVY     gi|15605331         0.053     28122.59
+   11 HLA-A*0201  LGLSSSVYG     gi|15605331         0.028     36820.46
+   12 HLA-A*0201  GLSSSVYGA     gi|15605331         0.695        27.15 <= SB
+   13 HLA-A*0201  LSSSVYGAG     gi|15605331         0.032     35426.10
+   14 HLA-A*0201  SSSVYGAGK     gi|15605331         0.027     37383.14
+   15 HLA-A*0201  SSVYGAGKA     gi|15605331         0.056     27424.05
+   16 HLA-A*0201  SVYGAGKAP     gi|15605331         0.042     31828.61
+   17 HLA-A*0201  VYGAGKAPS     gi|15605331         0.017     41652.45
+   18 HLA-A*0201  YGAGKAPSL     gi|15605331         0.242      3626.55
+   19 HLA-A*0201  GAGKAPSLQ     gi|15605331         0.012     44042.62
+   20 HLA-A*0201  AGKAPSLQA     gi|15605331         0.029     36713.73
+   21 HLA-A*0201  GKAPSLQAI     gi|15605331         0.093     18308.01
+   22 HLA-A*0201  KAPSLQAIL     gi|15605331         0.119     13868.49
+   23 HLA-A*0201  APSLQAILA     gi|15605331         0.040     32392.36
+   24 HLA-A*0201  PSLQAILAE     gi|15605331         0.012     43697.07
+   25 HLA-A*0201  SLQAILAEV     gi|15605331         0.838         5.80 <= SB
+   26 HLA-A*0201  LQAILAEVE     gi|15605331         0.040     32322.34
+   27 HLA-A*0201  QAILAEVED     gi|15605331         0.015     42552.84
+   28 HLA-A*0201  AILAEVEDT     gi|15605331         0.144     10470.87
+   29 HLA-A*0201  ILAEVEDTS     gi|15605331         0.296      2034.89
+   30 HLA-A*0201  LAEVEDTSS     gi|15605331         0.013     43578.70
+   31 HLA-A*0201  AEVEDTSSR     gi|15605331         0.019     40556.94
+   32 HLA-A*0201  EVEDTSSRL     gi|15605331         0.036     33913.85
+   33 HLA-A*0201  VEDTSSRLH     gi|15605331         0.009     45513.71
+   34 HLA-A*0201  EDTSSRLHA     gi|15605331         0.012     43939.15
+   35 HLA-A*0201  DTSSRLHAH     gi|15605331         0.025     38307.41
+   36 HLA-A*0201  TSSRLHAHH     gi|15605331         0.021     39965.68
+   37 HLA-A*0201  SSRLHAHHN     gi|15605331         0.017     41379.03
+   38 HLA-A*0201  SRLHAHHNE     gi|15605331         0.009     45555.42
+   39 HLA-A*0201  RLHAHHNEL     gi|15605331         0.484       267.30 <= WB
+   40 HLA-A*0201  LHAHHNELA     gi|15605331         0.038     33255.21
+   41 HLA-A*0201  HAHHNELAM     gi|15605331         0.064     25057.76
+   42 HLA-A*0201  AHHNELAMI     gi|15605331         0.038     32968.71
+   43 HLA-A*0201  HHNELAMIS     gi|15605331         0.015     42469.13
+   44 HLA-A*0201  HNELAMISE     gi|15605331         0.007     46474.63
+   45 HLA-A*0201  NELAMISER     gi|15605331         0.018     41167.80
+   46 HLA-A*0201  ELAMISERL     gi|15605331         0.222      4528.74
+   47 HLA-A*0201  LAMISERLD     gi|15605331         0.023     39105.77
+   48 HLA-A*0201  AMISERLDE     gi|15605331         0.067     24333.16
+   49 HLA-A*0201  MISERLDEQ     gi|15605331         0.111     15063.13
+   50 HLA-A*0201  ISERLDEQD     gi|15605331         0.004     47965.00
+   51 HLA-A*0201  SERLDEQDT     gi|15605331         0.006     46634.81
+   52 HLA-A*0201  ERLDEQDTK     gi|15605331         0.003     48389.48
+   53 HLA-A*0201  RLDEQDTKL     gi|15605331         0.525       170.29 <= WB
+   54 HLA-A*0201  LDEQDTKLQ     gi|15605331         0.002     48672.15
+   55 HLA-A*0201  DEQDTKLQQ     gi|15605331         0.003     48263.29
+   56 HLA-A*0201  EQDTKLQQL     gi|15605331         0.125     12902.06
+   57 HLA-A*0201  QDTKLQQLS     gi|15605331         0.008     46051.16
+   58 HLA-A*0201  DTKLQQLSS     gi|15605331         0.009     45328.27
+   59 HLA-A*0201  TKLQQLSST     gi|15605331         0.026     37583.77
+   60 HLA-A*0201  KLQQLSSTQ     gi|15605331         0.113     14676.38
+   61 HLA-A*0201  LQQLSSTQD     gi|15605331         0.030     36269.67
+   62 HLA-A*0201  QQLSSTQDH     gi|15605331         0.032     35533.59
+   63 HLA-A*0201  QLSSTQDHN     gi|15605331         0.042     31774.93
+   64 HLA-A*0201  LSSTQDHNL     gi|15605331         0.099     17124.33
+   65 HLA-A*0201  SSTQDHNLP     gi|15605331         0.007     46249.90
+   66 HLA-A*0201  STQDHNLPR     gi|15605331         0.039     32804.07
+   67 HLA-A*0201  TQDHNLPRQ     gi|15605331         0.032     35336.90
+   68 HLA-A*0201  QDHNLPRQV     gi|15605331         0.022     39269.69
+   69 HLA-A*0201  DHNLPRQVQ     gi|15605331         0.004     47760.09
+   70 HLA-A*0201  HNLPRQVQR     gi|15605331         0.011     44409.79
+   71 HLA-A*0201  NLPRQVQRL     gi|15605331         0.268      2738.35
+   72 HLA-A*0201  LPRQVQRLE     gi|15605331         0.010     44917.03
+   73 HLA-A*0201  PRQVQRLET     gi|15605331         0.004     47986.80
+   74 HLA-A*0201  RQVQRLETD     gi|15605331         0.070     23458.09
+   75 HLA-A*0201  QVQRLETDQ     gi|15605331         0.010     44817.04
+   76 HLA-A*0201  VQRLETDQK     gi|15605331         0.022     39575.10
+   77 HLA-A*0201  QRLETDQKA     gi|15605331         0.014     42904.06
+   78 HLA-A*0201  RLETDQKAL     gi|15605331         0.164      8433.33
+   79 HLA-A*0201  LETDQKALA     gi|15605331         0.033     34869.25
+   80 HLA-A*0201  ETDQKALAK     gi|15605331         0.014     42950.36
+   81 HLA-A*0201  TDQKALAKT     gi|15605331         0.015     42519.25
+   82 HLA-A*0201  DQKALAKTL     gi|15605331         0.036     33796.41
+   83 HLA-A*0201  QKALAKTLA     gi|15605331         0.028     37130.51
+   84 HLA-A*0201  KALAKTLAI     gi|15605331         0.348      1152.88
+   85 HLA-A*0201  ALAKTLAIL     gi|15605331         0.650        44.07 <= SB
+   86 HLA-A*0201  LAKTLAILS     gi|15605331         0.031     35567.70
+   87 HLA-A*0201  AKTLAILSQ     gi|15605331         0.016     42208.47
+   88 HLA-A*0201  KTLAILSQS     gi|15605331         0.184      6857.02
+   89 HLA-A*0201  TLAILSQSV     gi|15605331         0.628        56.01 <= WB
+   90 HLA-A*0201  LAILSQSVQ     gi|15605331         0.026     37681.09
+   91 HLA-A*0201  AILSQSVQD     gi|15605331         0.048     29778.32
+   92 HLA-A*0201  ILSQSVQDI     gi|15605331         0.481       276.00 <= WB
+   93 HLA-A*0201  LSQSVQDIR     gi|15605331         0.015     42387.14
+   94 HLA-A*0201  SQSVQDIRS     gi|15605331         0.030     36034.46
+   95 HLA-A*0201  QSVQDIRSS     gi|15605331         0.017     41556.12
+   96 HLA-A*0201  SVQDIRSSV     gi|15605331         0.382       800.34
+   97 HLA-A*0201  VQDIRSSVQ     gi|15605331         0.037     33629.71
+   98 HLA-A*0201  QDIRSSVQN     gi|15605331         0.006     46617.83
+   99 HLA-A*0201  DIRSSVQNK     gi|15605331         0.010     44877.52
+  100 HLA-A*0201  IRSSVQNKL     gi|15605331         0.050     29109.15
+  101 HLA-A*0201  RSSVQNKLQ     gi|15605331         0.009     45563.31
+  102 HLA-A*0201  SSVQNKLQE     gi|15605331         0.009     45269.95
+  103 HLA-A*0201  SVQNKLQEI     gi|15605331         0.319      1581.14
+  104 HLA-A*0201  VQNKLQEIQ     gi|15605331         0.028     36781.72
+  105 HLA-A*0201  QNKLQEIQQ     gi|15605331         0.005     47561.04
+  106 HLA-A*0201  NKLQEIQQE     gi|15605331         0.006     46987.49
+  107 HLA-A*0201  KLQEIQQEQ     gi|15605331         0.254      3206.10
+  108 HLA-A*0201  LQEIQQEQK     gi|15605331         0.017     41528.52
+  109 HLA-A*0201  QEIQQEQKK     gi|15605331         0.005     47264.88
+  110 HLA-A*0201  EIQQEQKKL     gi|15605331         0.020     40098.09
+  111 HLA-A*0201  IQQEQKKLA     gi|15605331         0.063     25167.53
+  112 HLA-A*0201  QQEQKKLAQ     gi|15605331         0.011     44291.12
+  113 HLA-A*0201  QEQKKLAQN     gi|15605331         0.007     46508.67
+  114 HLA-A*0201  EQKKLAQNL     gi|15605331         0.051     28690.87
+  115 HLA-A*0201  QKKLAQNLR     gi|15605331         0.008     46066.45
+  116 HLA-A*0201  KKLAQNLRA     gi|15605331         0.040     32322.59
+  117 HLA-A*0201  KLAQNLRAL     gi|15605331         0.500       224.09 <= WB
+  118 HLA-A*0201  LAQNLRALR     gi|15605331         0.030     36235.31
+  119 HLA-A*0201  AQNLRALRN     gi|15605331         0.032     35216.18
+  120 HLA-A*0201  QNLRALRNS     gi|15605331         0.011     44432.52
+  121 HLA-A*0201  NLRALRNSL     gi|15605331         0.155      9380.22
+  122 HLA-A*0201  LRALRNSLQ     gi|15605331         0.012     43894.81
+  123 HLA-A*0201  RALRNSLQA     gi|15605331         0.118     13956.40
+  124 HLA-A*0201  ALRNSLQAL     gi|15605331         0.463       333.69 <= WB
+  125 HLA-A*0201  LRNSLQALV     gi|15605331         0.120     13583.07
+  126 HLA-A*0201  RNSLQALVD     gi|15605331         0.009     45375.71
+  127 HLA-A*0201  NSLQALVDG     gi|15605331         0.021     39878.56
+  128 HLA-A*0201  SLQALVDGS     gi|15605331         0.234      3956.79
+  129 HLA-A*0201  LQALVDGSS     gi|15605331         0.076     22042.43
+  130 HLA-A*0201  QALVDGSSP     gi|15605331         0.012     43883.08
+  131 HLA-A*0201  ALVDGSSPE     gi|15605331         0.256      3143.04
+  132 HLA-A*0201  LVDGSSPEN     gi|15605331         0.062     25575.17
+  133 HLA-A*0201  VDGSSPENY     gi|15605331         0.003     48322.16
+  134 HLA-A*0201  DGSSPENYI     gi|15605331         0.023     39134.39
+  135 HLA-A*0201  GSSPENYID     gi|15605331         0.009     45549.67
+  136 HLA-A*0201  SSPENYIDF     gi|15605331         0.042     31837.70
+  137 HLA-A*0201  SPENYIDFL     gi|15605331         0.046     30304.68
+  138 HLA-A*0201  PENYIDFLT     gi|15605331         0.022     39520.92
+  139 HLA-A*0201  ENYIDFLTG     gi|15605331         0.016     42153.71
+  140 HLA-A*0201  NYIDFLTGE     gi|15605331         0.050     29117.43
+  141 HLA-A*0201  YIDFLTGET     gi|15605331         0.259      3034.73
+  142 HLA-A*0201  IDFLTGETP     gi|15605331         0.007     46397.75
+  143 HLA-A*0201  DFLTGETPE     gi|15605331         0.011     44454.16
+  144 HLA-A*0201  FLTGETPEH     gi|15605331         0.299      1961.88
+  145 HLA-A*0201  LTGETPEHI     gi|15605331         0.206      5405.06
+  146 HLA-A*0201  TGETPEHIH     gi|15605331         0.006     46699.27
+  147 HLA-A*0201  GETPEHIHI     gi|15605331         0.046     30536.82
+  148 HLA-A*0201  ETPEHIHIV     gi|15605331         0.230      4162.99
+  149 HLA-A*0201  TPEHIHIVK     gi|15605331         0.015     42640.73
+  150 HLA-A*0201  PEHIHIVKQ     gi|15605331         0.004     47654.96
+  151 HLA-A*0201  EHIHIVKQG     gi|15605331         0.007     46496.76
+  152 HLA-A*0201  HIHIVKQGE     gi|15605331         0.023     38865.59
+  153 HLA-A*0201  IHIVKQGET     gi|15605331         0.014     42796.50
+  154 HLA-A*0201  HIVKQGETL     gi|15605331         0.172      7807.45
+  155 HLA-A*0201  IVKQGETLS     gi|15605331         0.030     36120.85
+  156 HLA-A*0201  VKQGETLSK     gi|15605331         0.010     44970.04
+  157 HLA-A*0201  KQGETLSKI     gi|15605331         0.459       348.65 <= WB
+  158 HLA-A*0201  QGETLSKIA     gi|15605331         0.013     43370.65
+  159 HLA-A*0201  GETLSKIAS     gi|15605331         0.011     44478.21
+  160 HLA-A*0201  ETLSKIASK     gi|15605331         0.025     37946.45
+  161 HLA-A*0201  TLSKIASKY     gi|15605331         0.055     27721.69
+  162 HLA-A*0201  LSKIASKYN     gi|15605331         0.012     43954.55
+  163 HLA-A*0201  SKIASKYNI     gi|15605331         0.064     24934.43
+  164 HLA-A*0201  KIASKYNIP     gi|15605331         0.057     27064.72
+  165 HLA-A*0201  IASKYNIPV     gi|15605331         0.403       641.49
+  166 HLA-A*0201  ASKYNIPVV     gi|15605331         0.122     13422.51
+  167 HLA-A*0201  SKYNIPVVE     gi|15605331         0.017     41493.49
+  168 HLA-A*0201  KYNIPVVEL     gi|15605331         0.109     15316.89
+  169 HLA-A*0201  YNIPVVELK     gi|15605331         0.035     34378.99
+  170 HLA-A*0201  NIPVVELKK     gi|15605331         0.034     34584.55
+  171 HLA-A*0201  IPVVELKKL     gi|15605331         0.024     38358.18
+  172 HLA-A*0201  PVVELKKLN     gi|15605331         0.007     46527.12
+  173 HLA-A*0201  VVELKKLNK     gi|15605331         0.011     44267.93
+  174 HLA-A*0201  VELKKLNKL     gi|15605331         0.063     25246.89
+  175 HLA-A*0201  ELKKLNKLN     gi|15605331         0.013     43224.02
+  176 HLA-A*0201  LKKLNKLNS     gi|15605331         0.005     47343.86
+  177 HLA-A*0201  KKLNKLNSD     gi|15605331         0.017     41433.24
+  178 HLA-A*0201  KLNKLNSDT     gi|15605331         0.168      8133.03
+  179 HLA-A*0201  LNKLNSDTI     gi|15605331         0.028     36858.33
+  180 HLA-A*0201  NKLNSDTIF     gi|15605331         0.021     39992.50
+  181 HLA-A*0201  KLNSDTIFT     gi|15605331         0.533       156.96 <= WB
+  182 HLA-A*0201  LNSDTIFTD     gi|15605331         0.022     39398.82
+  183 HLA-A*0201  NSDTIFTDQ     gi|15605331         0.014     43101.94
+  184 HLA-A*0201  SDTIFTDQR     gi|15605331         0.007     46261.08
+  185 HLA-A*0201  DTIFTDQRI     gi|15605331         0.047     30124.42
+  186 HLA-A*0201  TIFTDQRIR     gi|15605331         0.025     37951.67
+  187 HLA-A*0201  IFTDQRIRL     gi|15605331         0.075     22322.51
+  188 HLA-A*0201  FTDQRIRLP     gi|15605331         0.039     32730.12
+  189 HLA-A*0201  TDQRIRLPK     gi|15605331         0.012     44106.05
+  190 HLA-A*0201  DQRIRLPKK     gi|15605331         0.010     44893.87
+  191 HLA-A*0201  QRIRLPKKK     gi|15605331         0.004     47769.57
+-----------------------------------------------------------------------------------
+
+Protein gi|15605331. Allele HLA-A*0201. Number of high binders 5. Number of weak binders 8. Number of peptides 193
+
+-----------------------------------------------------------------------------------

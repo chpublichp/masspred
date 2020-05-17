@@ -1,0 +1,12 @@
+${BASE}/predictors/isunstruct-2.02/IsUnstruct -long-disp 1 -file_save 0 ${TMP}/in > ${TMP}/out 2> /dev/null
+
+if [ ${?} -ne 0 ]
+then
+  ${BASE}/bin/region_fail -m u ${SQL} -o ${OUTPUT}_region_fail -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+else
+  cat ${TMP}/out | ${BASE}/bin/region_filter -m u ${SQL} -o ${OUTPUT}_region_success -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  if [ ${WORK_NUMERIC} = 'yes' ]
+  then
+    cat ${TMP}/out | ${BASE}/bin/region_filter -m u ${SQL} -n -o ${OUTPUT}_region_success_numeric -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  fi
+fi

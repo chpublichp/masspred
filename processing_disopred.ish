@@ -1,0 +1,13 @@
+${BASE}/predictors/disopred-2.43/rundisopred ${TMP}/in > /dev/null 2> /dev/null
+
+if [ ${?} -ne 0 ]
+then
+  ${BASE}/bin/region_fail -m d ${SQL} -o ${OUTPUT}_region_fail -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+else
+  cat ${TMP}/in.diso | ${BASE}/bin/region_filter -m d ${SQL} -o ${OUTPUT}_region_success -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  if [ ${WORK_NUMERIC} = 'yes' ]
+  then
+    cat ${TMP}/in.diso | ${BASE}/bin/region_filter -m d1 ${SQL} -n -o ${OUTPUT}_region_success_numeric -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+    cat ${TMP}/in.diso | ${BASE}/bin/region_filter -m d2 ${SQL} -n -o ${OUTPUT}_region_success_numeric -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  fi
+fi

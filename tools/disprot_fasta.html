@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>DisProt FASTA</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <style type="text/css">
+      /*<![CDATA[*/
+
+      .main
+      {
+        background-color: rgb(100%, 100%, 100%);
+        color: rgb(0%, 0%, 0%);
+        font-family: lucida grande, tahoma, verdana, arial, helvetica, sans-serif;
+        font-size: 12px;
+      }
+
+      /*]]>*/
+    </style>
+    <script type="text/javascript">
+      /*<![CDATA[*/
+
+      var width = 72;
+
+      function save(name, output)
+      {
+        var blob= new Blob([ output ], { type: 'text/plain' });
+        var download = document.createElement('a');
+        download.download = name;
+        download.innerHTML = '';
+        if(window.URL === undefined)
+          window.URL = window.webkitURL;
+        download.href = window.URL.createObjectURL(blob);
+        download.onclick = function(event)
+        {
+          document.body.removeChild(event.target);
+        };
+        download.style.display = 'none';
+        document.body.appendChild(download);
+        download.click();
+      }
+
+      function make(input)
+      {
+        var data;
+        try
+        {
+          data = JSON.parse(input);
+        }
+        catch(error)
+        {
+          alert('Bad format');
+          return;
+        }
+        var output = '';
+        for(var data_index = 0; data_index < data.length; data_index++)
+        {
+          output += '>'+data[data_index].disprot_id+'\n';
+          var i;
+          for(i = 0; i < data[data_index].sequence.length/width; i++)
+            output += data[data_index].sequence.substr(i*width, width)+'\n';
+          var rest = data[data_index].sequence.substr(i*width);
+          if(rest.length > 0)
+            output += rest+'\n';
+        }
+        document.getElementById('output').value = output;
+        save('disprot_fasta.fa', output);
+      }
+
+      function get()
+      {
+        var input = document.getElementById('input').value;
+        var input_array = input.split(',');
+        var input_text = '';
+        for(var i = 0; i < input_array.length; i++)
+        {
+          if(i != 0)
+            input_text += ',';
+          input_text += '"'+input_array[i].trim()+'"'
+        };
+        var xhttp = new XMLHttpRequest();
+        xhttp.onerror = function()
+        {
+          alert('Error in get');
+        };
+        xhttp.onload = function(event)
+        {
+          make(this.response);
+        };
+        xhttp.open('POST', 'http://www.disprot.org/ws/dl', true);
+        xhttp.setRequestHeader('Content-type', 'application/json;charset=utf-8');
+        xhttp.send('{"query":{"dpids":['+input_text+'],"record_type":"protein_record"},"format":"json"}');
+      }
+
+      function load()
+      {
+        var files = document.getElementById('file').files;
+        if(files.length != 1)
+        {
+          alert('Must select file');
+          return;
+        }
+        var reader = new FileReader();
+        reader.onerror = function()
+        {
+          alert('Error in loading');
+        }
+        reader.onload = function()
+        {
+          make(reader.result);
+        };
+        reader.readAsText(files[0]);
+      }
+
+      /*]]>*/
+    </script>
+  </head>
+  <body class="main">
+    List of Disprot ID (on example "DP00003, DP00004") : <input type="text" id="input"/><button type="button" onclick="get();">GET&SAVE</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;<b>OR</b>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="file" id="file"/><button type="button" onclick="load();">LOAD&SAVE</button><br/>
+    <textarea rows="10" cols="200" id="output"></textarea><br/>
+    <iframe src="http://www.disprot.org/browse" height="600" width="1600"></iframe>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+cat ${TMP}/in | grep "^>" | tr -d "\r" > ${TMP}/in_line
+cat ${TMP}/in | grep -v "^>" | tr -d "\n\r" >> ${TMP}/in_line
+echo >> ${TMP}/in_line
+
+${BASE}/predictors/predisorder-1.1/bin/predict_diso.sh ${TMP}/in_line ${TMP}/out > /dev/null 2> /dev/null
+
+if [ ${?} -ne 0 ]
+then
+  ${BASE}/bin/region_fail -m p ${SQL} -o ${OUTPUT}_region_fail -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+else
+  cat ${TMP}/out | ${BASE}/bin/region_filter -m p ${SQL} -o ${OUTPUT}_region_success -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  if [ ${WORK_NUMERIC} = 'yes' ]
+  then
+    cat ${TMP}/out | ${BASE}/bin/region_filter -m p ${SQL} -n -o ${OUTPUT}_region_success_numeric -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  fi
+fi

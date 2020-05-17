@@ -1,0 +1,231 @@
+# /home/chupcko/wrk/matf/predictors-2012-10-04/netmhciipan/Linux_x86_64/bin/netMHCIIpan ../../masspred-0.4/fasta.test/901/iedb_9011.faa
+# Sun Oct 14 12:21:06 2012
+# User: chupcko
+# PWD : /home/chupcko/wrk/matf/predictors-2012-10-04/netmhciipan
+# Host: Linux msi 3.1.6 x86_64
+# Command line parameters set to:
+#	[-rdir filename]     /home/chupcko/wrk/matf/predictors-2012-10-04/netmhciipan/Linux_x86_64 Home directory for NetMHpan
+#	[-syn filename]      /home/chupcko/wrk/matf/predictors-2012-10-04/netmhciipan/Linux_x86_64/data/synlist Synaps list
+#	[-v]                 0                    Verbose mode
+#	[-dirty]             0                    Dirty mode, leave tmp dir+files
+#	[-sdev]              0                    Print sdev
+#	[-tdir filename]     /tmp                 Temporary directory (Default $$)
+#	[-hlapseudo filename] /home/chupcko/wrk/matf/predictors-2012-10-04/netmhciipan/Linux_x86_64/data/HLA-DRB.pseudo File with HLA pseudo sequences
+#	[-a line]            DRB1_0101            HLA-DR allele (format DRBX_XXXX)
+#	[-f filename]                             File name with input
+#	[-w]                 0                    w option for webface
+#	[-s]                 0                    Sort output on descending affinity
+#	[-p]                 0                    Use peptide input
+#	[-th float]          50.000000            Threshold for high binding peptides
+#	[-lt float]          500.000000           Threshold for low binding peptides
+#	[-l int]             15                   Peptide length
+#	[-xls]               0                    Save output to xls file
+#	[-xlsfile filename]  NetMHCIIpan_out.xls  Filename for xls dump
+#	[-u]                 0                    Print unique core only
+#	[-listMHC]           0                    Print list of alleles included in netMHCpan
+#	[-t float]           -99.900002           Threshold for output
+#	[-thrfmt filename]   /home/chupcko/wrk/matf/predictors-2012-10-04/netmhciipan/Linux_x86_64/data/threshold/%s.thr_cmb Format for threshold filenames
+#	[-exthr]             0                    Exclude threshold file from calculation
+#	[-version filename]  /home/chupcko/wrk/matf/predictors-2012-10-04/netmhciipan/Linux_x86_64/data/version File with version information
+#	[-inptype int]       0                    Input type [0] FASTA [1] Peptide
+
+# NetMHCIIpan version 2.0
+
+# Input is in FSA format
+# Threshold for Strong binding peptides  50.000
+# Threshold for Weak binding peptides 500.000
+# HLA-DR pseudo sequence DRB1_0101 WLFELECYPDYLQRATYHVGF WLFELECYPDYLQRATYHVGF
+-----------------------------------------------------------------------------------------------------------------
+  pos       HLA            peptide        Identity Pos       Core 1-log50k(aff) Affinity(nM)    %Rank  BindLevel
+-----------------------------------------------------------------------------------------------------------------
+    0 DRB1*0101    MLANRLFLITLLGLS     gi_15605331   6  FLITLLGLS         0.521       100.35    32.00 <= WB
+    1 DRB1*0101    LANRLFLITLLGLSS     gi_15605331   6  LITLLGLSS         0.664        25.23    10.00 <= SB
+    2 DRB1*0101    ANRLFLITLLGLSSS     gi_15605331   5  LITLLGLSS         0.731        13.33     6.00 <= SB
+    3 DRB1*0101    NRLFLITLLGLSSSV     gi_15605331   4  LITLLGLSS         0.800         6.85     2.00 <= SB
+    4 DRB1*0101    RLFLITLLGLSSSVY     gi_15605331   3  LITLLGLSS         0.830         5.12     1.10 <= SB
+    5 DRB1*0101    LFLITLLGLSSSVYG     gi_15605331   2  LITLLGLSS         0.810         6.23     2.00 <= SB
+    6 DRB1*0101    FLITLLGLSSSVYGA     gi_15605331   3  TLLGLSSSV         0.823         5.50     1.50 <= SB
+    7 DRB1*0101    LITLLGLSSSVYGAG     gi_15605331   2  TLLGLSSSV         0.799         6.89     2.00 <= SB
+    8 DRB1*0101    ITLLGLSSSVYGAGK     gi_15605331   2  LLGLSSSVY         0.722        14.44     6.00 <= SB
+    9 DRB1*0101    TLLGLSSSVYGAGKA     gi_15605331   1  LLGLSSSVY         0.640        31.91    16.00 <= SB
+   10 DRB1*0101    LLGLSSSVYGAGKAP     gi_15605331   0  LLGLSSSVY         0.444       209.77    50.00 <= WB
+   11 DRB1*0101    LGLSSSVYGAGKAPS     gi_15605331   1  GLSSSVYGA         0.263      1192.68    50.00
+   12 DRB1*0101    GLSSSVYGAGKAPSL     gi_15605331   6  YGAGKAPSL         0.433       233.45    50.00 <= WB
+   13 DRB1*0101    LSSSVYGAGKAPSLQ     gi_15605331   5  YGAGKAPSL         0.537        86.15    32.00 <= WB
+   14 DRB1*0101    SSSVYGAGKAPSLQA     gi_15605331   4  YGAGKAPSL         0.654        27.75    16.00 <= SB
+   15 DRB1*0101    SSVYGAGKAPSLQAI     gi_15605331   3  YGAGKAPSL         0.708        16.63     7.00 <= SB
+   16 DRB1*0101    SVYGAGKAPSLQAIL     gi_15605331   2  YGAGKAPSL         0.637        32.92    16.00 <= SB
+   17 DRB1*0101    VYGAGKAPSLQAILA     gi_15605331   1  YGAGKAPSL         0.553        73.30    32.00 <= WB
+   18 DRB1*0101    YGAGKAPSLQAILAE     gi_15605331   0  YGAGKAPSL         0.436       227.52    50.00 <= WB
+   19 DRB1*0101    GAGKAPSLQAILAEV     gi_15605331   4  APSLQAILA         0.431       237.28    50.00 <= WB
+   20 DRB1*0101    AGKAPSLQAILAEVE     gi_15605331   3  APSLQAILA         0.463       174.84    50.00 <= WB
+   21 DRB1*0101    GKAPSLQAILAEVED     gi_15605331   4  SLQAILAEV         0.460       179.18    50.00 <= WB
+   22 DRB1*0101    KAPSLQAILAEVEDT     gi_15605331   3  SLQAILAEV         0.502       119.72    32.00 <= WB
+   23 DRB1*0101    APSLQAILAEVEDTS     gi_15605331   3  LQAILAEVE         0.507       114.88    32.00 <= WB
+   24 DRB1*0101    PSLQAILAEVEDTSS     gi_15605331   2  LQAILAEVE         0.476       154.46    50.00 <= WB
+   25 DRB1*0101    SLQAILAEVEDTSSR     gi_15605331   1  LQAILAEVE         0.435       229.65    50.00 <= WB
+   26 DRB1*0101    LQAILAEVEDTSSRL     gi_15605331   3  ILAEVEDTS         0.341       563.31    50.00
+   27 DRB1*0101    QAILAEVEDTSSRLH     gi_15605331   2  ILAEVEDTS         0.255      1292.23    50.00
+   28 DRB1*0101    AILAEVEDTSSRLHA     gi_15605331   1  ILAEVEDTS         0.238      1516.74    50.00
+   29 DRB1*0101    ILAEVEDTSSRLHAH     gi_15605331   3  EVEDTSSRL         0.219      1825.30    50.00
+   30 DRB1*0101    LAEVEDTSSRLHAHH     gi_15605331   2  EVEDTSSRL         0.166      3028.09    50.00
+   31 DRB1*0101    AEVEDTSSRLHAHHN     gi_15605331   1  EVEDTSSRL         0.144      3756.29    50.00
+   32 DRB1*0101    EVEDTSSRLHAHHNE     gi_15605331   4  TSSRLHAHH         0.135      4086.92    50.00
+   33 DRB1*0101    VEDTSSRLHAHHNEL     gi_15605331   4  SSRLHAHHN         0.186      2519.25    50.00
+   34 DRB1*0101    EDTSSRLHAHHNELA     gi_15605331   6  LHAHHNELA         0.301       828.89    50.00
+   35 DRB1*0101    DTSSRLHAHHNELAM     gi_15605331   5  LHAHHNELA         0.385       369.98    50.00 <= WB
+   36 DRB1*0101    TSSRLHAHHNELAMI     gi_15605331   4  LHAHHNELA         0.488       137.58    32.00 <= WB
+   37 DRB1*0101    SSRLHAHHNELAMIS     gi_15605331   3  LHAHHNELA         0.540        83.49    32.00 <= WB
+   38 DRB1*0101    SRLHAHHNELAMISE     gi_15605331   2  LHAHHNELA         0.482       145.65    50.00 <= WB
+   39 DRB1*0101    RLHAHHNELAMISER     gi_15605331   1  LHAHHNELA         0.437       223.84    50.00 <= WB
+   40 DRB1*0101    LHAHHNELAMISERL     gi_15605331   6  ELAMISERL         0.578        58.00    32.00 <= WB
+   41 DRB1*0101    HAHHNELAMISERLD     gi_15605331   5  ELAMISERL         0.585        54.29    32.00 <= WB
+   42 DRB1*0101    AHHNELAMISERLDE     gi_15605331   4  ELAMISERL         0.612        41.65    16.00 <= SB
+   43 DRB1*0101    HHNELAMISERLDEQ     gi_15605331   3  ELAMISERL         0.651        28.54    16.00 <= SB
+   44 DRB1*0101    HNELAMISERLDEQD     gi_15605331   2  ELAMISERL         0.611        41.99    16.00 <= SB
+   45 DRB1*0101    NELAMISERLDEQDT     gi_15605331   1  ELAMISERL         0.553        73.77    32.00 <= WB
+   46 DRB1*0101    ELAMISERLDEQDTK     gi_15605331   0  ELAMISERL         0.492       132.68    32.00 <= WB
+   47 DRB1*0101    LAMISERLDEQDTKL     gi_15605331   0  LAMISERLD         0.182      2606.28    50.00
+   48 DRB1*0101    AMISERLDEQDTKLQ     gi_15605331   5  RLDEQDTKL         0.135      4108.39    50.00
+   49 DRB1*0101    MISERLDEQDTKLQQ     gi_15605331   4  RLDEQDTKL         0.138      3997.06    50.00
+   50 DRB1*0101    ISERLDEQDTKLQQL     gi_15605331   3  RLDEQDTKL         0.185      2521.70    50.00
+   51 DRB1*0101    SERLDEQDTKLQQLS     gi_15605331   3  LDEQDTKLQ         0.187      2485.11    50.00
+   52 DRB1*0101    ERLDEQDTKLQQLSS     gi_15605331   2  LDEQDTKLQ         0.185      2521.17    50.00
+   53 DRB1*0101    RLDEQDTKLQQLSST     gi_15605331   6  TKLQQLSST         0.235      1560.28    50.00
+   54 DRB1*0101    LDEQDTKLQQLSSTQ     gi_15605331   5  TKLQQLSST         0.299       845.23    50.00
+   55 DRB1*0101    DEQDTKLQQLSSTQD     gi_15605331   5  KLQQLSSTQ         0.321       684.89    50.00
+   56 DRB1*0101    EQDTKLQQLSSTQDH     gi_15605331   4  KLQQLSSTQ         0.390       351.11    50.00 <= WB
+   57 DRB1*0101    QDTKLQQLSSTQDHN     gi_15605331   3  KLQQLSSTQ         0.439       220.33    50.00 <= WB
+   58 DRB1*0101    DTKLQQLSSTQDHNL     gi_15605331   3  LQQLSSTQD         0.494       129.43    32.00 <= WB
+   59 DRB1*0101    TKLQQLSSTQDHNLP     gi_15605331   2  LQQLSSTQD         0.504       118.23    32.00 <= WB
+   60 DRB1*0101    KLQQLSSTQDHNLPR     gi_15605331   1  LQQLSSTQD         0.436       225.95    50.00 <= WB
+   61 DRB1*0101    LQQLSSTQDHNLPRQ     gi_15605331   0  LQQLSSTQD         0.299       848.34    50.00
+   62 DRB1*0101    QQLSSTQDHNLPRQV     gi_15605331   2  LSSTQDHNL         0.184      2553.08    50.00
+   63 DRB1*0101    QLSSTQDHNLPRQVQ     gi_15605331   1  LSSTQDHNL         0.173      2845.80    50.00
+   64 DRB1*0101    LSSTQDHNLPRQVQR     gi_15605331   0  LSSTQDHNL         0.175      2799.60    50.00
+   65 DRB1*0101    SSTQDHNLPRQVQRL     gi_15605331   6  NLPRQVQRL         0.261      1214.64    50.00
+   66 DRB1*0101    STQDHNLPRQVQRLE     gi_15605331   5  NLPRQVQRL         0.263      1191.73    50.00
+   67 DRB1*0101    TQDHNLPRQVQRLET     gi_15605331   4  NLPRQVQRL         0.282       994.61    50.00
+   68 DRB1*0101    QDHNLPRQVQRLETD     gi_15605331   3  NLPRQVQRL         0.262      1204.14    50.00
+   69 DRB1*0101    DHNLPRQVQRLETDQ     gi_15605331   2  NLPRQVQRL         0.211      1965.58    50.00
+   70 DRB1*0101    HNLPRQVQRLETDQK     gi_15605331   1  NLPRQVQRL         0.207      2048.81    50.00
+   71 DRB1*0101    NLPRQVQRLETDQKA     gi_15605331   0  NLPRQVQRL         0.187      2482.27    50.00
+   72 DRB1*0101    LPRQVQRLETDQKAL     gi_15605331   4  VQRLETDQK         0.203      2136.58    50.00
+   73 DRB1*0101    PRQVQRLETDQKALA     gi_15605331   3  VQRLETDQK         0.279      1029.33    50.00
+   74 DRB1*0101    RQVQRLETDQKALAK     gi_15605331   5  LETDQKALA         0.311       751.76    50.00
+   75 DRB1*0101    QVQRLETDQKALAKT     gi_15605331   4  LETDQKALA         0.330       625.64    50.00
+   76 DRB1*0101    VQRLETDQKALAKTL     gi_15605331   3  LETDQKALA         0.450       197.74    50.00 <= WB
+   77 DRB1*0101    QRLETDQKALAKTLA     gi_15605331   2  LETDQKALA         0.465       171.78    50.00 <= WB
+   78 DRB1*0101    RLETDQKALAKTLAI     gi_15605331   4  DQKALAKTL         0.552        73.93    32.00 <= WB
+   79 DRB1*0101    LETDQKALAKTLAIL     gi_15605331   3  DQKALAKTL         0.609        43.14    16.00 <= SB
+   80 DRB1*0101    ETDQKALAKTLAILS     gi_15605331   6  LAKTLAILS         0.634        33.69    16.00 <= SB
+   81 DRB1*0101    TDQKALAKTLAILSQ     gi_15605331   5  LAKTLAILS         0.652        28.50    16.00 <= SB
+   82 DRB1*0101    DQKALAKTLAILSQS     gi_15605331   4  LAKTLAILS         0.650        28.86    16.00 <= SB
+   83 DRB1*0101    QKALAKTLAILSQSV     gi_15605331   3  LAKTLAILS         0.708        16.55     7.00 <= SB
+   84 DRB1*0101    KALAKTLAILSQSVQ     gi_15605331   5  TLAILSQSV         0.703        17.38     7.00 <= SB
+   85 DRB1*0101    ALAKTLAILSQSVQD     gi_15605331   4  TLAILSQSV         0.678        22.07     9.00 <= SB
+   86 DRB1*0101    LAKTLAILSQSVQDI     gi_15605331   3  TLAILSQSV         0.699        18.00     8.00 <= SB
+   87 DRB1*0101    AKTLAILSQSVQDIR     gi_15605331   2  TLAILSQSV         0.679        21.95     9.00 <= SB
+   88 DRB1*0101    KTLAILSQSVQDIRS     gi_15605331   1  TLAILSQSV         0.661        26.15    16.00 <= SB
+   89 DRB1*0101    TLAILSQSVQDIRSS     gi_15605331   0  TLAILSQSV         0.616        40.18    16.00 <= SB
+   90 DRB1*0101    LAILSQSVQDIRSSV     gi_15605331   2  ILSQSVQDI         0.475       156.13    50.00 <= WB
+   91 DRB1*0101    AILSQSVQDIRSSVQ     gi_15605331   1  ILSQSVQDI         0.386       365.58    50.00 <= WB
+   92 DRB1*0101    ILSQSVQDIRSSVQN     gi_15605331   0  ILSQSVQDI         0.316       716.21    50.00
+   93 DRB1*0101    LSQSVQDIRSSVQNK     gi_15605331   4  VQDIRSSVQ         0.297       859.97    50.00
+   94 DRB1*0101    SQSVQDIRSSVQNKL     gi_15605331   6  IRSSVQNKL         0.367       441.58    50.00 <= WB
+   95 DRB1*0101    QSVQDIRSSVQNKLQ     gi_15605331   5  IRSSVQNKL         0.367       440.25    50.00 <= WB
+   96 DRB1*0101    SVQDIRSSVQNKLQE     gi_15605331   4  IRSSVQNKL         0.362       462.41    50.00 <= WB
+   97 DRB1*0101    VQDIRSSVQNKLQEI     gi_15605331   3  IRSSVQNKL         0.416       274.66    50.00 <= WB
+   98 DRB1*0101    QDIRSSVQNKLQEIQ     gi_15605331   2  IRSSVQNKL         0.360       470.35    50.00 <= WB
+   99 DRB1*0101    DIRSSVQNKLQEIQQ     gi_15605331   1  IRSSVQNKL         0.312       746.31    50.00
+  100 DRB1*0101    IRSSVQNKLQEIQQE     gi_15605331   0  IRSSVQNKL         0.288       936.93    50.00
+  101 DRB1*0101    RSSVQNKLQEIQQEQ     gi_15605331   2  SVQNKLQEI         0.171      2890.83    50.00
+  102 DRB1*0101    SSVQNKLQEIQQEQK     gi_15605331   1  SVQNKLQEI         0.159      3251.91    50.00
+  103 DRB1*0101    SVQNKLQEIQQEQKK     gi_15605331   4  KLQEIQQEQ         0.156      3340.21    50.00
+  104 DRB1*0101    VQNKLQEIQQEQKKL     gi_15605331   3  KLQEIQQEQ         0.216      1883.21    50.00
+  105 DRB1*0101    QNKLQEIQQEQKKLA     gi_15605331   5  EIQQEQKKL         0.271      1107.27    50.00
+  106 DRB1*0101    NKLQEIQQEQKKLAQ     gi_15605331   4  EIQQEQKKL         0.290       919.80    50.00
+  107 DRB1*0101    KLQEIQQEQKKLAQN     gi_15605331   3  EIQQEQKKL         0.315       722.84    50.00
+  108 DRB1*0101    LQEIQQEQKKLAQNL     gi_15605331   3  IQQEQKKLA         0.343       553.06    50.00
+  109 DRB1*0101    QEIQQEQKKLAQNLR     gi_15605331   2  IQQEQKKLA         0.298       853.99    50.00
+  110 DRB1*0101    EIQQEQKKLAQNLRA     gi_15605331   4  EQKKLAQNL         0.350       520.48    50.00
+  111 DRB1*0101    IQQEQKKLAQNLRAL     gi_15605331   3  EQKKLAQNL         0.451       195.37    50.00 <= WB
+  112 DRB1*0101    QQEQKKLAQNLRALR     gi_15605331   4  KKLAQNLRA         0.510       111.36    32.00 <= WB
+  113 DRB1*0101    QEQKKLAQNLRALRN     gi_15605331   3  KKLAQNLRA         0.543        80.93    32.00 <= WB
+  114 DRB1*0101    EQKKLAQNLRALRNS     gi_15605331   4  LAQNLRALR         0.569        63.11    32.00 <= WB
+  115 DRB1*0101    QKKLAQNLRALRNSL     gi_15605331   4  AQNLRALRN         0.657        27.18    16.00 <= SB
+  116 DRB1*0101    KKLAQNLRALRNSLQ     gi_15605331   6  LRALRNSLQ         0.803         6.62     2.00 <= SB
+  117 DRB1*0101    KLAQNLRALRNSLQA     gi_15605331   5  LRALRNSLQ         0.843         4.50     0.90 <= SB
+  118 DRB1*0101    LAQNLRALRNSLQAL     gi_15605331   4  LRALRNSLQ         0.885         3.04     0.30 <= SB
+  119 DRB1*0101    AQNLRALRNSLQALV     gi_15605331   3  LRALRNSLQ         0.891         2.85     0.20 <= SB
+  120 DRB1*0101    QNLRALRNSLQALVD     gi_15605331   2  LRALRNSLQ         0.870         3.49     0.40 <= SB
+  121 DRB1*0101    NLRALRNSLQALVDG     gi_15605331   1  LRALRNSLQ         0.833         4.98     1.10 <= SB
+  122 DRB1*0101    LRALRNSLQALVDGS     gi_15605331   0  LRALRNSLQ         0.738        12.48     5.00 <= SB
+  123 DRB1*0101    RALRNSLQALVDGSS     gi_15605331   2  LRNSLQALV         0.570        62.27    32.00 <= WB
+  124 DRB1*0101    ALRNSLQALVDGSSP     gi_15605331   1  LRNSLQALV         0.486       139.65    32.00 <= WB
+  125 DRB1*0101    LRNSLQALVDGSSPE     gi_15605331   0  LRNSLQALV         0.430       240.19    50.00 <= WB
+  126 DRB1*0101    RNSLQALVDGSSPEN     gi_15605331   3  LQALVDGSS         0.380       387.55    50.00 <= WB
+  127 DRB1*0101    NSLQALVDGSSPENY     gi_15605331   2  LQALVDGSS         0.321       683.46    50.00
+  128 DRB1*0101    SLQALVDGSSPENYI     gi_15605331   1  LQALVDGSS         0.306       788.90    50.00
+  129 DRB1*0101    LQALVDGSSPENYID     gi_15605331   0  LQALVDGSS         0.266      1162.79    50.00
+  130 DRB1*0101    QALVDGSSPENYIDF     gi_15605331   3  VDGSSPENY         0.199      2205.76    50.00
+  131 DRB1*0101    ALVDGSSPENYIDFL     gi_15605331   2  VDGSSPENY         0.165      3062.32    50.00
+  132 DRB1*0101    LVDGSSPENYIDFLT     gi_15605331   1  VDGSSPENY         0.118      4834.18    50.00
+  133 DRB1*0101    VDGSSPENYIDFLTG     gi_15605331   5  PENYIDFLT         0.086      6542.45    50.00
+  134 DRB1*0101    DGSSPENYIDFLTGE     gi_15605331   4  PENYIDFLT         0.085      6646.32    50.00
+  135 DRB1*0101    GSSPENYIDFLTGET     gi_15605331   6  YIDFLTGET         0.189      2435.18    50.00
+  136 DRB1*0101    SSPENYIDFLTGETP     gi_15605331   5  YIDFLTGET         0.247      1388.57    50.00
+  137 DRB1*0101    SPENYIDFLTGETPE     gi_15605331   5  IDFLTGETP         0.294       888.78    50.00
+  138 DRB1*0101    PENYIDFLTGETPEH     gi_15605331   3  YIDFLTGET         0.387       362.67    50.00 <= WB
+  139 DRB1*0101    ENYIDFLTGETPEHI     gi_15605331   3  IDFLTGETP         0.463       174.29    50.00 <= WB
+  140 DRB1*0101    NYIDFLTGETPEHIH     gi_15605331   2  IDFLTGETP         0.475       155.11    50.00 <= WB
+  141 DRB1*0101    YIDFLTGETPEHIHI     gi_15605331   3  FLTGETPEH         0.527        94.65    32.00 <= WB
+  142 DRB1*0101    IDFLTGETPEHIHIV     gi_15605331   3  LTGETPEHI         0.508       112.99    32.00 <= WB
+  143 DRB1*0101    DFLTGETPEHIHIVK     gi_15605331   2  LTGETPEHI         0.420       264.31    50.00 <= WB
+  144 DRB1*0101    FLTGETPEHIHIVKQ     gi_15605331   1  LTGETPEHI         0.390       353.00    50.00 <= WB
+  145 DRB1*0101    LTGETPEHIHIVKQG     gi_15605331   0  LTGETPEHI         0.194      2327.23    50.00
+  146 DRB1*0101    TGETPEHIHIVKQGE     gi_15605331   2  ETPEHIHIV         0.095      6001.68    50.00
+  147 DRB1*0101    GETPEHIHIVKQGET     gi_15605331   6  IHIVKQGET         0.116      4923.79    50.00
+  148 DRB1*0101    ETPEHIHIVKQGETL     gi_15605331   6  HIVKQGETL         0.245      1419.57    50.00
+  149 DRB1*0101    TPEHIHIVKQGETLS     gi_15605331   5  HIVKQGETL         0.370       427.46    50.00 <= WB
+  150 DRB1*0101    PEHIHIVKQGETLSK     gi_15605331   4  HIVKQGETL         0.458       183.78    50.00 <= WB
+  151 DRB1*0101    EHIHIVKQGETLSKI     gi_15605331   3  HIVKQGETL         0.561        67.93    32.00 <= WB
+  152 DRB1*0101    HIHIVKQGETLSKIA     gi_15605331   3  IVKQGETLS         0.594        49.67    32.00 <= SB
+  153 DRB1*0101    IHIVKQGETLSKIAS     gi_15605331   1  HIVKQGETL         0.536        86.82    32.00 <= WB
+  154 DRB1*0101    HIVKQGETLSKIASK     gi_15605331   0  HIVKQGETL         0.459       181.04    50.00 <= WB
+  155 DRB1*0101    IVKQGETLSKIASKY     gi_15605331   0  IVKQGETLS         0.332       614.10    50.00
+  156 DRB1*0101    VKQGETLSKIASKYN     gi_15605331   3  GETLSKIAS         0.284       976.35    50.00
+  157 DRB1*0101    KQGETLSKIASKYNI     gi_15605331   4  TLSKIASKY         0.326       649.70    50.00
+  158 DRB1*0101    QGETLSKIASKYNIP     gi_15605331   3  TLSKIASKY         0.312       747.60    50.00
+  159 DRB1*0101    GETLSKIASKYNIPV     gi_15605331   3  LSKIASKYN         0.355       492.89    50.00 <= WB
+  160 DRB1*0101    ETLSKIASKYNIPVV     gi_15605331   5  IASKYNIPV         0.398       328.07    50.00 <= WB
+  161 DRB1*0101    TLSKIASKYNIPVVE     gi_15605331   4  IASKYNIPV         0.422       259.30    50.00 <= WB
+  162 DRB1*0101    LSKIASKYNIPVVEL     gi_15605331   3  IASKYNIPV         0.459       182.31    50.00 <= WB
+  163 DRB1*0101    SKIASKYNIPVVELK     gi_15605331   2  IASKYNIPV         0.419       267.54    50.00 <= WB
+  164 DRB1*0101    KIASKYNIPVVELKK     gi_15605331   1  IASKYNIPV         0.409       293.12    50.00 <= WB
+  165 DRB1*0101    IASKYNIPVVELKKL     gi_15605331   4  YNIPVVELK         0.428       244.61    50.00 <= WB
+  166 DRB1*0101    ASKYNIPVVELKKLN     gi_15605331   3  YNIPVVELK         0.416       273.54    50.00 <= WB
+  167 DRB1*0101    SKYNIPVVELKKLNK     gi_15605331   2  YNIPVVELK         0.378       396.58    50.00 <= WB
+  168 DRB1*0101    KYNIPVVELKKLNKL     gi_15605331   1  YNIPVVELK         0.349       521.27    50.00
+  169 DRB1*0101    YNIPVVELKKLNKLN     gi_15605331   5  VELKKLNKL         0.292       907.49    50.00
+  170 DRB1*0101    NIPVVELKKLNKLNS     gi_15605331   4  VELKKLNKL         0.305       796.22    50.00
+  171 DRB1*0101    IPVVELKKLNKLNSD     gi_15605331   3  VELKKLNKL         0.302       820.10    50.00
+  172 DRB1*0101    PVVELKKLNKLNSDT     gi_15605331   2  VELKKLNKL         0.291       910.64    50.00
+  173 DRB1*0101    VVELKKLNKLNSDTI     gi_15605331   6  LNKLNSDTI         0.410       291.57    50.00 <= WB
+  174 DRB1*0101    VELKKLNKLNSDTIF     gi_15605331   5  LNKLNSDTI         0.479       149.85    50.00 <= WB
+  175 DRB1*0101    ELKKLNKLNSDTIFT     gi_15605331   4  LNKLNSDTI         0.554        72.64    32.00 <= WB
+  176 DRB1*0101    LKKLNKLNSDTIFTD     gi_15605331   3  LNKLNSDTI         0.573        60.48    32.00 <= WB
+  177 DRB1*0101    KKLNKLNSDTIFTDQ     gi_15605331   2  LNKLNSDTI         0.510       111.29    32.00 <= WB
+  178 DRB1*0101    KLNKLNSDTIFTDQR     gi_15605331   1  LNKLNSDTI         0.423       257.00    50.00 <= WB
+  179 DRB1*0101    LNKLNSDTIFTDQRI     gi_15605331   0  LNKLNSDTI         0.309       765.03    50.00
+  180 DRB1*0101    NKLNSDTIFTDQRIR     gi_15605331   5  DTIFTDQRI         0.187      2480.41    50.00
+  181 DRB1*0101    KLNSDTIFTDQRIRL     gi_15605331   4  DTIFTDQRI         0.272      1096.23    50.00
+  182 DRB1*0101    LNSDTIFTDQRIRLP     gi_15605331   5  IFTDQRIRL         0.273      1089.27    50.00
+  183 DRB1*0101    NSDTIFTDQRIRLPK     gi_15605331   4  IFTDQRIRL         0.297       865.87    50.00
+  184 DRB1*0101    SDTIFTDQRIRLPKK     gi_15605331   3  IFTDQRIRL         0.339       578.38    50.00
+  185 DRB1*0101    DTIFTDQRIRLPKKK     gi_15605331   2  IFTDQRIRL         0.336       594.63    50.00
+-----------------------------------------------------------------------------------------------------------------
+
+Protein gi_15605331. Allele DRB1*0101. Number of high binders 35. Number of weak binders 72. Number of peptides 186
+
+-----------------------------------------------------------------------------------------------------------------

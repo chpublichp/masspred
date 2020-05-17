@@ -1,0 +1,14 @@
+cat ${TMP}/in | grep -v \> > ${TMP}/in_plain
+
+java -jar ${BASE}/predictors/vsl-2/VSL2.jar -s:${TMP}/in_plain > ${TMP}/out 2> /dev/null
+
+if [ ${?} -ne 0 ]
+then
+  ${BASE}/bin/region_fail -m v ${SQL} -o ${OUTPUT}_region_fail -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+else
+  cat ${TMP}/out | ${BASE}/bin/region_filter -m v ${SQL} -o ${OUTPUT}_region_success -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  if [ ${WORK_NUMERIC} = 'yes' ]
+  then
+    cat ${TMP}/out | ${BASE}/bin/region_filter -m v ${SQL} -n -o ${OUTPUT}_region_success_numeric -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  fi
+fi

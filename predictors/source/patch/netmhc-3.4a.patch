@@ -1,0 +1,35 @@
+diff -ruN netmhc-3.4a.original/netMHC netmhc-3.4a/netMHC
+--- netmhc-3.4a.original/netMHC	2014-04-06 17:05:41.520647216 +0200
++++ netmhc-3.4a/netMHC	2014-11-23 02:18:36.500458796 +0100
+@@ -11,11 +11,12 @@
+ ###############################################################################
+ 
+ # full path to the NetMHC-3.4 directory (mandatory)
+-setenv	NMHOME	/usr/cbs/packages/netMHC/3.4/netMHC-3.4
++setenv  NMHOME_FULL  `readlink -f $0`
++setenv  NMHOME       `dirname $NMHOME_FULL`
+ 
+ # determine where to store temporary files (must be writable to all users)
+-setenv	TMPDIR	/scratch
+-#setenv TMPDIR  /tmp
++#setenv	TMPDIR	/scratch
++setenv TMPDIR  /tmp
+ 
+ # determine platform (do not change this unless you don't have 'uname'!)
+ setenv	UNIX	`uname -s`
+@@ -25,11 +26,11 @@
+ 
+ set PLATFORM = `echo $UNIX $AR | awk '{print $1"_"$2}'`
+ 
+-if ( $PLATFORM == "Linux_x86_64" ) then
+-	set PYTHON = /usr/local/bin/python2.5
+-else
++#if ( $PLATFORM == "Linux_x86_64" ) then
++#	set PYTHON = /usr/local/bin/python2.5
++#else
+ 	set PYTHON = `which python`
+-endif
++#endif
+ 
+ ###############################################################################
+ #               NOTHING SHOULD NEED CHANGING BELOW THIS LINE!

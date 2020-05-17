@@ -1,0 +1,251 @@
+# /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64/bin/netMHCpan ../../masspred-0.4/fasta.test/901/iedb_9011.faa
+# Sun Oct 14 12:20:30 2012
+# User: chupcko
+# PWD : /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan
+# Host: Linux msi 3.1.6 x86_64
+# Command line parameters set to:
+#	[-rdir filename]     /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64 Home directory for NetMHpan
+#	[-blsyn filename]    /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64/data/syn/bl/synlist Blosum synaps list
+#	[-spsyn filename]    /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64/data/syn/sp/synlist Sparse synaps list
+#	[-spblsyn filename]  /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64/data/syn/spbl/synlist SPBL synaps list
+#	[-smin float]        -1.000000            Min value for sparse encoding
+#	[-smax float]        1.000000             Max value for sparse encoding
+#	[-bln float]         5.000000             Normalizing factor for blosum score
+#	[-v]                 0                    Verbose mode
+#	[-dirty]             0                    Dirty mode, leave tmp dir+files
+#	[-sdev]              0                    Print sdev
+#	[-tdir filename]     /tmp                 Temporary directory (Default $$)
+#	[-hlapseudo filename] /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64/data/MHC_pseudo.dat File with HLA pseudo sequences
+#	[-hlaseq filename]                        File with full length HLA sequences
+#	[-block int]         50000                Block size of predictions
+#	[-a line]            HLA-A02:01           HLA allele
+#	[-f filename]                             File name with input
+#	[-w]                 0                    w option for webface
+#	[-s]                 0                    Sort output on descending affinity
+#	[-p]                 0                    Use peptide input
+#	[-th float]          50.000000            Threshold for high binding peptides
+#	[-lt float]          500.000000           Threshold for low binding peptides
+#	[-rth float]         0.100000             Rank Threshold for high binding peptides
+#	[-rlt float]         1.000000             Rank Threshold for low binding peptides
+#	[-l int]             9                    Peptide length [8-11]
+#	[-xls]               0                    Save output to xls file
+#	[-xlsfile filename]  NetMHCpan_out.xls    Filename for xls dump
+#	[-t float]           -99.900002           Threshold for output
+#	[-thrfmt filename]   /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64/data/threshold/%s.thr Format for threshold filenames
+#	[-ic50]              0                    Print IC50 values for all alleles
+#	[-whitelist filename] /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64/data/threshold/whitelist List of alleles to include IC50 values
+#	[-expfix]            0                    Exclude prefix from synlist
+#	[-version filename]  /home/chupcko/wrk/matf/predictors-2012-10-04/netmhcpan/Linux_x86_64/data/version File with version information
+#	[-inptype int]       0                    Input type [0] FASTA [1] Peptide
+#	[-listMHC]           0                    Print list of alleles included in netMHCpan
+
+# NetMHCpan version 2.4
+
+# Input is in FSA format
+
+# Peptide length 9
+
+HLA-A02:01 : Estimated prediction accuracy  0.853 (using nearest neighbor HLA-A02:01)
+
+# Threshold for Strong binding peptides  50.000
+# Threshold for Weak binding peptides 500.000
+-----------------------------------------------------------------------------------
+  pos          HLA    peptide        Identity 1-log50k(aff) Affinity(nM)    %Rank  BindLevel
+-----------------------------------------------------------------------------------
+    0  HLA-A*02:01  MLANRLFLI     gi_15605331         0.851         5.04     0.15 <= SB
+    1  HLA-A*02:01  LANRLFLIT     gi_15605331         0.085     20037.89    32.00
+    2  HLA-A*02:01  ANRLFLITL     gi_15605331         0.064     25080.73    32.00
+    3  HLA-A*02:01  NRLFLITLL     gi_15605331         0.069     23778.78    32.00
+    4  HLA-A*02:01  RLFLITLLG     gi_15605331         0.209      5226.94    15.00
+    5  HLA-A*02:01  LFLITLLGL     gi_15605331         0.168      8145.89    15.00
+    6  HLA-A*02:01  FLITLLGLS     gi_15605331         0.393       711.79     5.00
+    7  HLA-A*02:01  LITLLGLSS     gi_15605331         0.069     23734.32    32.00
+    8  HLA-A*02:01  ITLLGLSSS     gi_15605331         0.101     16844.95    32.00
+    9  HLA-A*02:01  TLLGLSSSV     gi_15605331         0.708        23.50     0.80 <= SB
+   10  HLA-A*02:01  LLGLSSSVY     gi_15605331         0.053     28077.90    50.00
+   11  HLA-A*02:01  LGLSSSVYG     gi_15605331         0.024     38718.86    50.00
+   12  HLA-A*02:01  GLSSSVYGA     gi_15605331         0.658        40.63     1.50 <= SB
+   13  HLA-A*02:01  LSSSVYGAG     gi_15605331         0.025     38166.50    50.00
+   14  HLA-A*02:01  SSSVYGAGK     gi_15605331         0.021     39698.06    50.00
+   15  HLA-A*02:01  SSVYGAGKA     gi_15605331         0.039     32832.97    50.00
+   16  HLA-A*02:01  SVYGAGKAP     gi_15605331         0.026     37758.88    50.00
+   17  HLA-A*02:01  VYGAGKAPS     gi_15605331         0.013     43331.38    50.00
+   18  HLA-A*02:01  YGAGKAPSL     gi_15605331         0.147     10217.61    15.00
+   19  HLA-A*02:01  GAGKAPSLQ     gi_15605331         0.008     46030.24    50.00
+   20  HLA-A*02:01  AGKAPSLQA     gi_15605331         0.025     38099.79    50.00
+   21  HLA-A*02:01  GKAPSLQAI     gi_15605331         0.053     28068.87    50.00
+   22  HLA-A*02:01  KAPSLQAIL     gi_15605331         0.100     16903.93    32.00
+   23  HLA-A*02:01  APSLQAILA     gi_15605331         0.041     32214.36    50.00
+   24  HLA-A*02:01  PSLQAILAE     gi_15605331         0.012     43906.55    50.00
+   25  HLA-A*02:01  SLQAILAEV     gi_15605331         0.846         5.29     0.15 <= SB
+   26  HLA-A*02:01  LQAILAEVE     gi_15605331         0.024     38486.89    50.00
+   27  HLA-A*02:01  QAILAEVED     gi_15605331         0.015     42623.07    50.00
+   28  HLA-A*02:01  AILAEVEDT     gi_15605331         0.141     10875.12    16.00
+   29  HLA-A*02:01  ILAEVEDTS     gi_15605331         0.224      4435.68    10.00
+   30  HLA-A*02:01  LAEVEDTSS     gi_15605331         0.015     42572.96    50.00
+   31  HLA-A*02:01  AEVEDTSSR     gi_15605331         0.015     42285.74    50.00
+   32  HLA-A*02:01  EVEDTSSRL     gi_15605331         0.035     34236.44    50.00
+   33  HLA-A*02:01  VEDTSSRLH     gi_15605331         0.008     45668.94    50.00
+   34  HLA-A*02:01  EDTSSRLHA     gi_15605331         0.010     44923.04    50.00
+   35  HLA-A*02:01  DTSSRLHAH     gi_15605331         0.031     35877.96    50.00
+   36  HLA-A*02:01  TSSRLHAHH     gi_15605331         0.014     43181.30    50.00
+   37  HLA-A*02:01  SSRLHAHHN     gi_15605331         0.008     45817.56    50.00
+   38  HLA-A*02:01  SRLHAHHNE     gi_15605331         0.007     46256.73    50.00
+   39  HLA-A*02:01  RLHAHHNEL     gi_15605331         0.495       235.91     3.00 <= WB
+   40  HLA-A*02:01  LHAHHNELA     gi_15605331         0.039     32918.91    50.00
+   41  HLA-A*02:01  HAHHNELAM     gi_15605331         0.040     32334.00    50.00
+   42  HLA-A*02:01  AHHNELAMI     gi_15605331         0.048     29904.47    50.00
+   43  HLA-A*02:01  HHNELAMIS     gi_15605331         0.017     41632.90    50.00
+   44  HLA-A*02:01  HNELAMISE     gi_15605331         0.010     45109.42    50.00
+   45  HLA-A*02:01  NELAMISER     gi_15605331         0.016     41933.08    50.00
+   46  HLA-A*02:01  ELAMISERL     gi_15605331         0.200      5768.90    15.00
+   47  HLA-A*02:01  LAMISERLD     gi_15605331         0.019     40620.78    50.00
+   48  HLA-A*02:01  AMISERLDE     gi_15605331         0.032     35242.98    50.00
+   49  HLA-A*02:01  MISERLDEQ     gi_15605331         0.083     20266.18    32.00
+   50  HLA-A*02:01  ISERLDEQD     gi_15605331         0.005     47586.79    50.00
+   51  HLA-A*02:01  SERLDEQDT     gi_15605331         0.004     48125.62    50.00
+   52  HLA-A*02:01  ERLDEQDTK     gi_15605331         0.004     47892.39    50.00
+   53  HLA-A*02:01  RLDEQDTKL     gi_15605331         0.546       135.65     3.00 <= WB
+   54  HLA-A*02:01  LDEQDTKLQ     gi_15605331         0.003     48162.94    50.00
+   55  HLA-A*02:01  DEQDTKLQQ     gi_15605331         0.004     48012.41    50.00
+   56  HLA-A*02:01  EQDTKLQQL     gi_15605331         0.083     20418.80    32.00
+   57  HLA-A*02:01  QDTKLQQLS     gi_15605331         0.007     46288.78    50.00
+   58  HLA-A*02:01  DTKLQQLSS     gi_15605331         0.013     43386.89    50.00
+   59  HLA-A*02:01  TKLQQLSST     gi_15605331         0.015     42355.33    50.00
+   60  HLA-A*02:01  KLQQLSSTQ     gi_15605331         0.069     23624.34    32.00
+   61  HLA-A*02:01  LQQLSSTQD     gi_15605331         0.018     41155.19    50.00
+   62  HLA-A*02:01  QQLSSTQDH     gi_15605331         0.019     40899.79    50.00
+   63  HLA-A*02:01  QLSSTQDHN     gi_15605331         0.021     39771.99    50.00
+   64  HLA-A*02:01  LSSTQDHNL     gi_15605331         0.062     25431.13    32.00
+   65  HLA-A*02:01  SSTQDHNLP     gi_15605331         0.008     45609.19    50.00
+   66  HLA-A*02:01  STQDHNLPR     gi_15605331         0.041     32247.83    50.00
+   67  HLA-A*02:01  TQDHNLPRQ     gi_15605331         0.023     38929.56    50.00
+   68  HLA-A*02:01  QDHNLPRQV     gi_15605331         0.013     43290.77    50.00
+   69  HLA-A*02:01  DHNLPRQVQ     gi_15605331         0.003     48442.74    50.00
+   70  HLA-A*02:01  HNLPRQVQR     gi_15605331         0.014     42863.83    50.00
+   71  HLA-A*02:01  NLPRQVQRL     gi_15605331         0.253      3224.19     9.00
+   72  HLA-A*02:01  LPRQVQRLE     gi_15605331         0.005     47330.71    50.00
+   73  HLA-A*02:01  PRQVQRLET     gi_15605331         0.004     47689.87    50.00
+   74  HLA-A*02:01  RQVQRLETD     gi_15605331         0.039     32670.08    50.00
+   75  HLA-A*02:01  QVQRLETDQ     gi_15605331         0.009     45322.37    50.00
+   76  HLA-A*02:01  VQRLETDQK     gi_15605331         0.015     42704.60    50.00
+   77  HLA-A*02:01  QRLETDQKA     gi_15605331         0.017     41796.60    50.00
+   78  HLA-A*02:01  RLETDQKAL     gi_15605331         0.121     13460.47    32.00
+   79  HLA-A*02:01  LETDQKALA     gi_15605331         0.027     37246.55    50.00
+   80  HLA-A*02:01  ETDQKALAK     gi_15605331         0.020     40375.98    50.00
+   81  HLA-A*02:01  TDQKALAKT     gi_15605331         0.012     43984.52    50.00
+   82  HLA-A*02:01  DQKALAKTL     gi_15605331         0.030     36264.84    50.00
+   83  HLA-A*02:01  QKALAKTLA     gi_15605331         0.018     41046.84    50.00
+   84  HLA-A*02:01  KALAKTLAI     gi_15605331         0.316      1633.80     7.00
+   85  HLA-A*02:01  ALAKTLAIL     gi_15605331         0.571       103.36     2.00 <= WB
+   86  HLA-A*02:01  LAKTLAILS     gi_15605331         0.029     36612.06    50.00
+   87  HLA-A*02:01  AKTLAILSQ     gi_15605331         0.008     45667.12    50.00
+   88  HLA-A*02:01  KTLAILSQS     gi_15605331         0.130     12285.46    32.00
+   89  HLA-A*02:01  TLAILSQSV     gi_15605331         0.573       101.47     2.00 <= WB
+   90  HLA-A*02:01  LAILSQSVQ     gi_15605331         0.015     42342.96    50.00
+   91  HLA-A*02:01  AILSQSVQD     gi_15605331         0.031     35909.65    50.00
+   92  HLA-A*02:01  ILSQSVQDI     gi_15605331         0.435       454.19     4.00 <= WB
+   93  HLA-A*02:01  LSQSVQDIR     gi_15605331         0.019     40670.74    50.00
+   94  HLA-A*02:01  SQSVQDIRS     gi_15605331         0.024     38552.74    50.00
+   95  HLA-A*02:01  QSVQDIRSS     gi_15605331         0.015     42699.97    50.00
+   96  HLA-A*02:01  SVQDIRSSV     gi_15605331         0.270      2695.87     8.00
+   97  HLA-A*02:01  VQDIRSSVQ     gi_15605331         0.024     38545.11    50.00
+   98  HLA-A*02:01  QDIRSSVQN     gi_15605331         0.005     47399.89    50.00
+   99  HLA-A*02:01  DIRSSVQNK     gi_15605331         0.010     45006.70    50.00
+  100  HLA-A*02:01  IRSSVQNKL     gi_15605331         0.038     33125.07    50.00
+  101  HLA-A*02:01  RSSVQNKLQ     gi_15605331         0.007     46135.27    50.00
+  102  HLA-A*02:01  SSVQNKLQE     gi_15605331         0.007     46549.11    50.00
+  103  HLA-A*02:01  SVQNKLQEI     gi_15605331         0.195      6088.60    15.00
+  104  HLA-A*02:01  VQNKLQEIQ     gi_15605331         0.016     42125.31    50.00
+  105  HLA-A*02:01  QNKLQEIQQ     gi_15605331         0.004     47870.12    50.00
+  106  HLA-A*02:01  NKLQEIQQE     gi_15605331         0.003     48370.97    50.00
+  107  HLA-A*02:01  KLQEIQQEQ     gi_15605331         0.149      9969.92    15.00
+  108  HLA-A*02:01  LQEIQQEQK     gi_15605331         0.014     42933.63    50.00
+  109  HLA-A*02:01  QEIQQEQKK     gi_15605331         0.005     47416.83    50.00
+  110  HLA-A*02:01  EIQQEQKKL     gi_15605331         0.016     41949.29    50.00
+  111  HLA-A*02:01  IQQEQKKLA     gi_15605331         0.078     21406.74    32.00
+  112  HLA-A*02:01  QQEQKKLAQ     gi_15605331         0.008     45888.18    50.00
+  113  HLA-A*02:01  QEQKKLAQN     gi_15605331         0.006     46937.01    50.00
+  114  HLA-A*02:01  EQKKLAQNL     gi_15605331         0.029     36591.69    50.00
+  115  HLA-A*02:01  QKKLAQNLR     gi_15605331         0.006     46986.31    50.00
+  116  HLA-A*02:01  KKLAQNLRA     gi_15605331         0.033     35042.97    50.00
+  117  HLA-A*02:01  KLAQNLRAL     gi_15605331         0.538       148.65     3.00 <= WB
+  118  HLA-A*02:01  LAQNLRALR     gi_15605331         0.029     36383.65    50.00
+  119  HLA-A*02:01  AQNLRALRN     gi_15605331         0.026     37719.01    50.00
+  120  HLA-A*02:01  QNLRALRNS     gi_15605331         0.007     46583.37    50.00
+  121  HLA-A*02:01  NLRALRNSL     gi_15605331         0.151      9780.91    15.00
+  122  HLA-A*02:01  LRALRNSLQ     gi_15605331         0.009     45144.72    50.00
+  123  HLA-A*02:01  RALRNSLQA     gi_15605331         0.114     14545.33    32.00
+  124  HLA-A*02:01  ALRNSLQAL     gi_15605331         0.429       481.91     4.00 <= WB
+  125  HLA-A*02:01  LRNSLQALV     gi_15605331         0.071     23259.10    32.00
+  126  HLA-A*02:01  RNSLQALVD     gi_15605331         0.007     46157.91    50.00
+  127  HLA-A*02:01  NSLQALVDG     gi_15605331         0.021     39630.81    50.00
+  128  HLA-A*02:01  SLQALVDGS     gi_15605331         0.165      8411.09    15.00
+  129  HLA-A*02:01  LQALVDGSS     gi_15605331         0.050     29051.26    50.00
+  130  HLA-A*02:01  QALVDGSSP     gi_15605331         0.008     45948.62    50.00
+  131  HLA-A*02:01  ALVDGSSPE     gi_15605331         0.133     11850.06    32.00
+  132  HLA-A*02:01  LVDGSSPEN     gi_15605331         0.045     30638.20    50.00
+  133  HLA-A*02:01  VDGSSPENY     gi_15605331         0.007     46163.39    50.00
+  134  HLA-A*02:01  DGSSPENYI     gi_15605331         0.017     41462.70    50.00
+  135  HLA-A*02:01  GSSPENYID     gi_15605331         0.010     45019.21    50.00
+  136  HLA-A*02:01  SSPENYIDF     gi_15605331         0.052     28527.95    50.00
+  137  HLA-A*02:01  SPENYIDFL     gi_15605331         0.026     37594.36    50.00
+  138  HLA-A*02:01  PENYIDFLT     gi_15605331         0.021     40042.17    50.00
+  139  HLA-A*02:01  ENYIDFLTG     gi_15605331         0.012     43694.53    50.00
+  140  HLA-A*02:01  NYIDFLTGE     gi_15605331         0.026     37751.28    50.00
+  141  HLA-A*02:01  YIDFLTGET     gi_15605331         0.312      1701.16     7.00
+  142  HLA-A*02:01  IDFLTGETP     gi_15605331         0.007     46250.23    50.00
+  143  HLA-A*02:01  DFLTGETPE     gi_15605331         0.008     45681.46    50.00
+  144  HLA-A*02:01  FLTGETPEH     gi_15605331         0.179      7169.77    15.00
+  145  HLA-A*02:01  LTGETPEHI     gi_15605331         0.170      7982.04    15.00
+  146  HLA-A*02:01  TGETPEHIH     gi_15605331         0.007     46497.95    50.00
+  147  HLA-A*02:01  GETPEHIHI     gi_15605331         0.029     36362.57    50.00
+  148  HLA-A*02:01  ETPEHIHIV     gi_15605331         0.177      7402.86    15.00
+  149  HLA-A*02:01  TPEHIHIVK     gi_15605331         0.014     43030.51    50.00
+  150  HLA-A*02:01  PEHIHIVKQ     gi_15605331         0.004     47764.04    50.00
+  151  HLA-A*02:01  EHIHIVKQG     gi_15605331         0.006     46978.50    50.00
+  152  HLA-A*02:01  HIHIVKQGE     gi_15605331         0.012     44018.31    50.00
+  153  HLA-A*02:01  IHIVKQGET     gi_15605331         0.009     45269.62    50.00
+  154  HLA-A*02:01  HIVKQGETL     gi_15605331         0.116     14230.57    32.00
+  155  HLA-A*02:01  IVKQGETLS     gi_15605331         0.028     36832.41    50.00
+  156  HLA-A*02:01  VKQGETLSK     gi_15605331         0.009     45180.08    50.00
+  157  HLA-A*02:01  KQGETLSKI     gi_15605331         0.393       711.42     5.00
+  158  HLA-A*02:01  QGETLSKIA     gi_15605331         0.009     45512.23    50.00
+  159  HLA-A*02:01  GETLSKIAS     gi_15605331         0.010     44820.74    50.00
+  160  HLA-A*02:01  ETLSKIASK     gi_15605331         0.028     36792.07    50.00
+  161  HLA-A*02:01  TLSKIASKY     gi_15605331         0.057     27039.26    50.00
+  162  HLA-A*02:01  LSKIASKYN     gi_15605331         0.007     46301.29    50.00
+  163  HLA-A*02:01  SKIASKYNI     gi_15605331         0.046     30383.68    50.00
+  164  HLA-A*02:01  KIASKYNIP     gi_15605331         0.028     37055.46    50.00
+  165  HLA-A*02:01  IASKYNIPV     gi_15605331         0.347      1172.55     6.00
+  166  HLA-A*02:01  ASKYNIPVV     gi_15605331         0.114     14578.89    32.00
+  167  HLA-A*02:01  SKYNIPVVE     gi_15605331         0.012     43823.49    50.00
+  168  HLA-A*02:01  KYNIPVVEL     gi_15605331         0.073     22635.95    32.00
+  169  HLA-A*02:01  YNIPVVELK     gi_15605331         0.030     36094.44    50.00
+  170  HLA-A*02:01  NIPVVELKK     gi_15605331         0.022     39387.02    50.00
+  171  HLA-A*02:01  IPVVELKKL     gi_15605331         0.020     40485.20    50.00
+  172  HLA-A*02:01  PVVELKKLN     gi_15605331         0.005     47197.41    50.00
+  173  HLA-A*02:01  VVELKKLNK     gi_15605331         0.014     42775.99    50.00
+  174  HLA-A*02:01  VELKKLNKL     gi_15605331         0.040     32475.54    50.00
+  175  HLA-A*02:01  ELKKLNKLN     gi_15605331         0.008     45810.30    50.00
+  176  HLA-A*02:01  LKKLNKLNS     gi_15605331         0.002     48687.07    50.00
+  177  HLA-A*02:01  KKLNKLNSD     gi_15605331         0.008     46090.54    50.00
+  178  HLA-A*02:01  KLNKLNSDT     gi_15605331         0.120     13722.66    32.00
+  179  HLA-A*02:01  LNKLNSDTI     gi_15605331         0.017     41733.01    50.00
+  180  HLA-A*02:01  NKLNSDTIF     gi_15605331         0.012     43782.87    50.00
+  181  HLA-A*02:01  KLNSDTIFT     gi_15605331         0.424       511.08     5.00
+  182  HLA-A*02:01  LNSDTIFTD     gi_15605331         0.020     40438.49    50.00
+  183  HLA-A*02:01  NSDTIFTDQ     gi_15605331         0.017     41796.74    50.00
+  184  HLA-A*02:01  SDTIFTDQR     gi_15605331         0.009     45591.43    50.00
+  185  HLA-A*02:01  DTIFTDQRI     gi_15605331         0.041     32176.74    50.00
+  186  HLA-A*02:01  TIFTDQRIR     gi_15605331         0.020     40181.73    50.00
+  187  HLA-A*02:01  IFTDQRIRL     gi_15605331         0.066     24454.41    32.00
+  188  HLA-A*02:01  FTDQRIRLP     gi_15605331         0.028     37027.18    50.00
+  189  HLA-A*02:01  TDQRIRLPK     gi_15605331         0.012     43683.65    50.00
+  190  HLA-A*02:01  DQRIRLPKK     gi_15605331         0.012     43692.95    50.00
+  191  HLA-A*02:01  QRIRLPKKK     gi_15605331         0.005     47389.32    50.00
+-----------------------------------------------------------------------------------
+
+Protein gi_15605331. Allele HLA-A*02:01. Number of high binders 4. Number of weak binders 7. Number of peptides 192
+
+-----------------------------------------------------------------------------------

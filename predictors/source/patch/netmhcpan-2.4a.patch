@@ -1,0 +1,17 @@
+diff -ruN netmhcpan-2.4a.original/netMHCpan netmhcpan-2.4a/netMHCpan
+--- netmhcpan-2.4a.original/netMHCpan	2010-12-18 15:27:28.000000000 +0100
++++ netmhcpan-2.4a/netMHCpan	2013-06-23 15:28:02.602412989 +0200
+@@ -11,10 +11,11 @@
+ ###############################################################################
+ 
+ # full path to the NetMHCpan 2.4 directory (mandatory)
+-setenv	NMHOME	/usr/cbs/bio/src/netMHCpan-2.4
++setenv	NMHOME_FULL	`readlink -f $0`
++setenv	NMHOME	`dirname $NMHOME_FULL`
+ 
+ # determine where to store temporary files (must be writable to all users)
+-setenv	TMPDIR	/scratch
++setenv	TMPDIR	/tmp
+ 
+ # determine platform (do not change this unless you don't have 'uname'!)
+ setenv	UNIX	`uname -s`

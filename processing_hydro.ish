@@ -1,0 +1,1 @@
+cat ${TMP}/in | ${BASE}/bin/hydro ${SQL} -o ${OUTPUT}_hydro -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}

@@ -1,0 +1,35 @@
+diff -ruN disembl-1.4.original/DisEMBL.py disembl-1.4/DisEMBL.py
+--- disembl-1.4.original/DisEMBL.py	2013-02-05 12:54:15.000000000 +0100
++++ disembl-1.4/DisEMBL.py	2013-06-20 10:48:43.260858462 +0200
+@@ -1,4 +1,4 @@
+-#!/usr/local/bin/python
++#!/usr/bin/env python
+ # Copyright (C) 2004 Rune Linding & Lars Juhl Jensen - EMBL
+ # The DisEMBL is licensed under the GPL license
+ # (http://www.opensource.org/licenses/gpl-license.php)
+@@ -8,6 +8,14 @@
+ # by Shyam Saladi (saladi1@illinois.edu), Janauary 2013 
+ # Bio:SeqIO completely replaces Bio:Fasta
+ 
++import os, sys, inspect
++
++import_folder = os.path.realpath(os.path.abspath(os.path.split(inspect.getfile( inspect.currentframe() ))[0] + '/../app/lib64/python2.6/site-packages'))
++if import_folder not in sys.path:
++    sys.path.insert(0, import_folder)
++
++cmd_folder = os.path.realpath(os.path.abspath(os.path.split(inspect.getfile( inspect.currentframe() ))[0]))
++
+ from string import *
+ from sys import argv
+ from Bio import File
+@@ -19,8 +27,8 @@
+ from os import system,popen3
+ 
+ # change these to the correct paths
+-NN_bin = '/PATH/DisEMBL-1.4/disembl'
+-SG_bin = '/PATH/DisEMBL-1.4/sav_gol'
++NN_bin = cmd_folder + '/disembl'
++SG_bin = cmd_folder + '/sav_gol'
+ 
+ def JensenNet(sequence):
+     outFile = tempfile.mktemp()

@@ -1,0 +1,94 @@
+diff -ruN ond-1.0.original/CRF/path.h ond-1.0/CRF/path.h
+--- ond-1.0.original/CRF/path.h	2009-04-05 13:42:35.000000000 +0200
++++ ond-1.0/CRF/path.h	2013-06-02 15:24:38.226396491 +0200
+@@ -9,6 +9,7 @@
+ #define CRFPP_PATH_H_
+ 
+ #include <vector>
++#include <cstdio>
+ #include "node.h"
+ 
+ namespace CRFPP {
+diff -ruN ond-1.0.original/OnD-CRF.pl ond-1.0/OnD-CRF.pl
+--- ond-1.0.original/OnD-CRF.pl	2012-09-07 10:30:15.000000000 +0200
++++ ond-1.0/OnD-CRF.pl	2013-06-02 15:24:38.226396491 +0200
+@@ -9,6 +9,13 @@
+ my $head="";
+ my $count=0;
+ 
++$home_full_dir = `readlink -f $0`;
++chop $home_full_dir;
++$home_dir = `dirname $home_full_dir`;
++chop $home_dir;
++
++`mkdir -p OnDCRF forsspro tes sec results`;
++
+ open (FASTA, $seqfile) || die "can't find your protein sequences file:$seqfile.\n";
+ open (OUT,">oneline.txt");
+ while (<FASTA>) {
+@@ -125,7 +132,7 @@
+ 
+ 	for($iseq=0;$iseq<@sgleseq;$iseq++){#--------------------Loop for predicting secondary structure-----------------------------------
+ 		print $iseq.": ".$sgleseq[$iseq]."\n";
+-		`sspro4/bin/predict_ssa.sh forsspro/$sgleseq[$iseq] sec/$sgleseq[$iseq].sec`;
++		`$home_dir/sspro4/bin/predict_ssa.sh forsspro/$sgleseq[$iseq] sec/$sgleseq[$iseq].sec`;
+ 		#print $iseq.": ".$sgleseq[$iseq]."\n";
+ 		open(RG, "sec/$sgleseq[$iseq].sec");
+ 		my @D=<RG>;
+@@ -313,7 +320,7 @@
+ 
+ 		close (OUT);
+ 
+-		`crf_test -v 1 -m CRF/all.model tes/$sgleseq[$iseq] >results/$sgleseq[$iseq]`;
++		`crf_test -v 1 -m $home_dir/CRF/all.model tes/$sgleseq[$iseq] >results/$sgleseq[$iseq]`;
+ 
+ 		open(POS, "results/$sgleseq[$iseq]");
+ 		my @POSlong=<POS>;
+diff -ruN ond-1.0.original/OnD-CRF.sh ond-1.0/OnD-CRF.sh
+--- ond-1.0.original/OnD-CRF.sh	1970-01-01 01:00:00.000000000 +0100
++++ ond-1.0/OnD-CRF.sh	2013-06-02 15:23:33.431399198 +0200
+@@ -0,0 +1,22 @@
++#!/bin/bash
++
++DIR=$(dirname $(readlink -f ${0}))
++
++if [ $# -ne 2 ]
++then
++  exit
++fi
++
++IN=$(readlink -f ${1})
++OUT=$(readlink -f ${2})
++
++export PATH=${PATH}:${DIR}/../app/bin
++export LD_LIBRARY_PATH=${DIR}/../app/lib
++
++TMP=$(mktemp -d -t ond.XXXXXX)
++cd ${TMP}
++
++${DIR}/OnD-CRF.pl ${IN} ${OUT}
++
++rm -rf ${TMP}
++
+diff -ruN ond-1.0.original/sspro4/configure.pl ond-1.0/sspro4/configure.pl
+--- ond-1.0.original/sspro4/configure.pl	2012-09-06 17:48:13.000000000 +0200
++++ ond-1.0/sspro4/configure.pl	2013-06-02 15:24:38.227396491 +0200
+@@ -16,13 +16,17 @@
+ #J. Cheng, A. Randall, M. Sweredoski, P. Baldi, SCRATCH: a Protein Structure and Structural Feature Prediction Server, Nucleic Acids Research, Special Issue on Web Servers, in press, 2005.
+ ##########################################################
+ 
++$home_full_dir = `readlink -f $0`;
++chop $home_full_dir;
++$home_dir = `dirname $home_full_dir`;
++chop $home_dir;
+ 
+ 
+ #######Customize settings here###############################################
+ 
+ #set installation directory of SSpro 
+ 
+-$install_dir = "/your_home_dir/OnD"."/sspro4/";
++$install_dir = $home_dir;
+ 
+ ##########End of Customizaton################################################
+ 

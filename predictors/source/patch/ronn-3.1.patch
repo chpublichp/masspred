@@ -1,0 +1,35 @@
+diff -ruN ronn-3.1.original/RONN.c ronn-3.1/RONN.c
+--- ronn-3.1.original/RONN.c	2007-08-06 14:04:16.000000000 +0200
++++ ronn-3.1/RONN.c	2013-06-04 12:27:01.619513361 +0200
+@@ -18,16 +18,30 @@
+ #include<stdlib.h>
+ #include<string.h>
+ #include<math.h>
++#include <unistd.h>
+ //@@@@@ the path can be changed
+-char *myPath="/usr/local/RONNv3_1";
++#define PATH_LENGTH 1024
++char myPath[PATH_LENGTH];
+ 
+ int main(int argc,char **argv)
+ {
++char *slash;
+ int nM=10,nChar,len=0,format;float disorder_weight=0.53;
+ FILE *fp;char fModel[200],fPDF[200],str[10000],*query=NULL;int r,m,nR;float X[10000][10],mean[10000],std[10000];
+ if(argc!=3) { printf("RONN filename fileFormat(0=plain text;1=FASTA!\n"); return(1); }
+ sscanf(argv[2],"%d",&format);
+ 
++if(argv[0][0] == '/')
++  snprintf(myPath, PATH_LENGTH, "%s", argv[0]);
++else
++{
++  char cwd[PATH_LENGTH];
++  snprintf(myPath, PATH_LENGTH, "%s/%s", getcwd(cwd, PATH_LENGTH), argv[0]);
++}
++slash = strrchr(myPath, '/');
++if(slash != NULL)
++  *slash = '\0';
++
+ if(!(fp=fopen(argv[1],"r"))) { printf("can't open %s\n",argv[1]); return(1); }
+ 
+ if(format==0) //this is for reading plain text data

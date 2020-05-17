@@ -1,0 +1,12 @@
+${BASE}/predictors/netmhciipan-3.1a/netMHCIIpan -a ${ALLELE} -l ${EPITOPE_LENGTH} -f ${TMP}/in > ${TMP}/out 2> /dev/null
+
+if [ ${?} -ne 0 ]
+then
+  ${BASE}/bin/epitope_fail -m pan_2-3.1a ${SQL} -o ${OUTPUT}_epitope_fail -a ${ALLELE} -l ${EPITOPE_LENGTH} -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+else
+  cat ${TMP}/out | ${BASE}/bin/epitope_filter -m pan_2-3.1a ${SQL} -o ${OUTPUT}_epitope_success -a ${ALLELE} -l ${EPITOPE_LENGTH} -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  if [ ${WORK_NUMERIC} = 'yes' ]
+  then
+    cat ${TMP}/out | ${BASE}/bin/epitope_filter -m pan_2-3.1a ${SQL} -n -o ${OUTPUT}_epitope_success_numeric -a ${ALLELE} -l ${EPITOPE_LENGTH} -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  fi
+fi

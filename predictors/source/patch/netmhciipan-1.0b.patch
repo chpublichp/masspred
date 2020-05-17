@@ -1,0 +1,17 @@
+diff -ruN netmhciipan-1.0b.orginial/netMHCIIpan netmhciipan-1.0b/netMHCIIpan
+--- netmhciipan-1.0b.orginial/netMHCIIpan	2008-09-22 16:23:34.000000000 +0200
++++ netmhciipan-1.0b/netMHCIIpan	2013-06-23 15:36:27.874391857 +0200
+@@ -11,10 +11,11 @@
+ ###############################################################################
+ 
+ # full path to the NetMHCIIpan 1.0 directory (mandatory)
+-setenv	NMHOME	/usr/cbs/packages/netMHCIIpan/1.0/netMHCIIpan-1.0
++setenv	NMHOME_FULL	`readlink -f $0`
++setenv	NMHOME	`dirname $NMHOME_FULL`
+ 
+ # determine where to store temporary files (must be writable to all users)
+-setenv	TMPDIR	/scratch
++setenv	TMPDIR	/tmp
+ 
+ # determine platform (do not change this unless you don't have 'uname'!)
+ setenv	UNIX	`uname -s`

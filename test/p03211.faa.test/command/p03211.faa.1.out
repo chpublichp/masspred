@@ -1,0 +1,15 @@
+MASSPRED_FASTA_ID=119110
+HOSTTYPE=x86_64-linux
+MASSPRED_OUTPUT=/xsp/wrk/matf/wrk/masspred/test1/p03211.faa.out/command/p03211.faa.1
+MASSPRED_FILE_NAME=p03211
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/games:/usr/lib64/java/bin:/usr/lib64/java/jre/bin:/usr/lib64/kde4/libexec:/usr/lib64/qt/bin:/usr/share/texmf/bin:.:/usr/games:/usr/lib64/java/bin:/usr/lib64/java/jre/bin:/usr/lib64/kde4/libexec:/usr/lib64/qt/bin:/usr/share/texmf/bin:.:/home/chupcko/bin:/xsp/wrk/matf/wrk/masspred/test1
+PWD=/tmp/masspred-dir-1448757809-6742
+MASSPRED_INPUT=/xsp/wrk/matf/wrk/masspred/test1/p03211.faa
+LANG=en_US
+MASSPRED_INPUT_POSITION=1
+HOME=/home/chupcko
+OSTYPE=linux
+MACHTYPE=x86_64
+MASSPRED_FASTA_REFERENCE=P03211.1
+MASSPRED_FASTA_REFERENCE_DB=sp
+MASSPRED_FASTA_DB=gi

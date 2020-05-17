@@ -1,0 +1,16 @@
+cat ${TMP}/in | grep "^>" | tr -d "\r" > ${TMP}/in_line
+cat ${TMP}/in | grep -v "^>" | tr -d "\n\r" >> ${TMP}/in_line
+echo >> ${TMP}/in_line
+
+${BASE}/predictors/ronn-3.1/RONN ${TMP}/in_line 1 > /dev/null 2> /dev/null
+
+if [ ${?} -ne 1 ]
+then
+  ${BASE}/bin/region_fail -m r ${SQL} -o ${OUTPUT}_region_fail -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+else
+  cat ${TMP}/disorder.prb | ${BASE}/bin/region_filter -m r ${SQL} -o ${OUTPUT}_region_success -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  if [ ${WORK_NUMERIC} = 'yes' ]
+  then
+    cat ${TMP}/disorder.prb | ${BASE}/bin/region_filter -m r ${SQL} -n -o ${OUTPUT}_region_success_numeric -p ${FASTA_ID} -r ${FASTA_REFERENCE} -f ${FILE_NAME}
+  fi
+fi

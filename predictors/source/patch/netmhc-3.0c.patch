@@ -1,0 +1,29 @@
+diff -ruN netmhc-3.0c.original/netMHC-3.0 netmhc-3.0c/netMHC-3.0
+--- netmhc-3.0c.original/netMHC-3.0	2008-09-24 16:40:10.000000000 +0200
++++ netmhc-3.0c/netMHC-3.0	2013-06-23 14:09:01.163611288 +0200
+@@ -1,4 +1,4 @@
+-#! /usr/local/python/bin/python
++#!/usr/bin/env python
+ 
+ # NetMHC 3.0c main script
+ # 
+@@ -10,8 +10,18 @@
+ #               GENERAL SETTINGS: CUSTOMIZE TO YOUR SITE
+ ###############################################################################
+ 
++import os, sys, inspect
++
++import_folder = os.path.realpath(os.path.abspath(os.path.split(inspect.getfile( inspect.currentframe() ))[0] + '/../app/lib64/python2.6/site-packages'))
++if import_folder not in sys.path:
++    sys.path.insert(0, import_folder)
++
++cmd_folder = os.path.realpath(os.path.abspath(os.path.split(inspect.getfile( inspect.currentframe() ))[0]))
++
++
+ # full path to the 'netMHC-3.0' directory (mandatory)
+-preddir = "/usr/cbs/packages/netMHC/currdist/netMHC-3.0";
++# preddir = "/usr/cbs/packages/netMHC/currdist/netMHC-3.0";
++preddir = cmd_folder
+ 
+ ###############################################################################
+ #               NOTHING SHOULD NEED CHANGING BELOW THIS LINE!

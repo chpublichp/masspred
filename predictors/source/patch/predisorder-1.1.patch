@@ -1,0 +1,49 @@
+diff -ruN predisorder-1.1.original/configure.pl predisorder-1.1/configure.pl
+--- predisorder-1.1.original/configure.pl	2010-08-26 06:16:25.000000000 +0200
++++ predisorder-1.1/configure.pl	2013-06-16 11:58:20.711660164 +0200
+@@ -11,13 +11,19 @@
+ #
+ ##########################################################
+ 
++
++$home_full_dir = `readlink -f $0`;
++chop $home_full_dir;
++$home_dir = `dirname $home_full_dir`;
++chop $home_dir;
++
+ #######Customize settings here##############
+ #
+ #set installation directory of PreDisorder1.0
+-$install_dir = "/var/www/html/download/predisorder1.1/";
++$install_dir = $home_dir;
+ 
+ #set the fullpath of sspro4 installation directory
+-$pspro_dir = "/var/www/html/download/sspro4/";
++$pspro_dir = $home_dir."/sspro4.1";
+ #
+ ######End of Customization##################
+ 
+diff -ruN predisorder-1.1.original/sspro4.1/configure.pl predisorder-1.1/sspro4.1/configure.pl
+--- predisorder-1.1.original/sspro4.1/configure.pl	2008-04-20 23:52:59.000000000 +0200
++++ predisorder-1.1/sspro4.1/configure.pl	2013-06-16 11:58:20.711660164 +0200
+@@ -17,14 +17,18 @@
+ ##########################################################
+ 
+ 
++$home_full_dir = `readlink -f $0`;
++chop $home_full_dir;
++$home_dir = `dirname $home_full_dir`;
++chop $home_dir;
+ 
+ #######Customize settings here###############################################
+ 
+ #set installation directory of SSpro to your unzipped sspro4 directory 
+-$install_dir = "/var/www/html/download/sspro4.1/";
++$install_dir = $home_dir;
+ 
+ #the directory of NR database
+-$nr_db_dir = "/home/chengji/software/prosys_database/nr/";
++$nr_db_dir = $home_dir."/../../nr";
+ 
+ #the name of nr database
+ $nr_db = "nr"; 
